@@ -1,0 +1,164 @@
+:root {
+    --bg-primary: rgb(0,43,57);
+    --bg-secondary: rgb(0, 48, 65);
+    --bg-dark: rgb(0, 48, 65);
+    --bg-light: rgba(21, 129, 201, 0.603);
+    --bg-variable: rgba(21, 129, 201, 0.403);
+    --bg-interpolated: rgba(21, 129, 201, 0.203);
+    --fg-primary: rgb(201,241,254);
+    --fg-secondary: #fec34d;
+    --fg-dark: rgba(21, 129, 201, 0.803);
+    --fg-light: rgb(104,216,255);
+    --fg-hit: rgba(4, 255, 120, 0.795);
+    --fg-custom: rgba(255, 167, 2, 0.856);
+    --fg-fail: tomato;
+    --fg-retry: rgba(255, 255, 0, 0.815);
+    --fg-ban: plum;
+    --fg-tocheck: skyblue;
+    --fg-error: red;
+    --fg-link: #84a3c5;
+    --fg-linkhover: turquoise;
+  }
+  
+  .sidebar .nav-item a:hover {
+    background-color: #aaa;
+  }
+  
+  .sidebar .nav-item a.active {
+    background-color: #aaa;
+  }
+  
+  a {
+      color: #0382d6;
+  }
+  
+  /* BOOTSTRAP BUTTONS */
+  .btn-outline-primary {
+    color: white;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    transition: all .5s ease-out;
+  }
+  
+  .btn-outline-primary:hover {
+      color: rgb(104,216,255);
+      background-color: steelblue;
+      border-color: steelblue;
+  }
+  
+  .btn-outline-secondary {
+    color: white;
+    background: linear-gradient(to right, black 50%, gray 50%);
+    background-size: 200% 100%;
+    transition: all .5s ease-out;
+  }
+  
+  .btn-outline-secondary:hover {
+      color: white;
+      background-color: rgba(21, 129, 201, 0.603);
+      border-color:rgba(21, 129, 201, 0.603);
+  }
+  
+  .btn-outline-success {
+      color: white;
+      background-color: rgba(34, 139, 34, 0.712);
+      border-color: rgb(2, 170, 2);
+  }
+  
+  .btn-outline-success:hover {
+      color: white;
+      background-color: rgb(2, 170, 2);
+      border-color: rgb(2, 170, 2);
+  }
+  
+  .btn-outline-warning {
+      color: white;
+      background-color: orange;
+      border-color: orange;
+  }
+  
+  .btn-outline-warning:hover {
+      color: white;
+      background-color: darkorange;
+      border-color: darkorange;
+  }
+  
+  .btn-outline-danger {
+      color: white;
+      background-color: rgb(180, 57, 88);
+      border-color: rgb(255, 71, 117);
+  }
+  
+  .btn-outline-danger:hover {
+      color: white;
+      background-color: red;
+      border-color: red;
+  }
+  
+  .btn-outline-dark {
+      color: white;
+      background-color: darkslategrey;
+      border-color: darkslategrey;
+  }
+  
+  .btn-outline-dark:hover {
+      color: white;
+      background-color: black;
+      border-color: black;
+  }
+  
+  /* SIDEBAR */
+  .sidebar {
+      border-right: 1px solid var(--bg-light);
+      
+  }
+
+.sidebar .nav-item a.active, .sidebar .nav-item a:hover {
+    background-color: rgba(21, 129, 201, 0.203) !important;
+}
+  .sidebar .nav-item a.active {
+      --angle: 0deg;
+    border: 2px solid;
+    /*border-image: linear-gradient(var(--angle), #743ad5, #d53a9d) 1;
+   */
+/*   border-image: conic-gradient(from var(--angle), #743ad5, rgb(70, 139, 196), #d53a9d, rgb(70, 139, 196), magenta, #743ad5,rgb(70, 139, 196)) 1; 
+  */  
+  border-image: conic-gradient(from var(--angle), #0079a3,#37cbff) 1; 
+  animation: 5s rotate linear infinite;
+}
+  .debugger-log, .monaco-editor-container, .config-list {
+    --angle: 0deg;
+    border: 2px solid;
+    /*border-image: linear-gradient(var(--angle), #743ad5, #d53a9d) 1;
+   */
+/*   border-image: conic-gradient(from var(--angle), #743ad5, rgb(70, 139, 196), #d53a9d, rgb(70, 139, 196), magenta, #743ad5,rgb(70, 139, 196)) 1; 
+  */  
+  border-image: conic-gradient(from var(--angle), #743ad5, rgb(70, 139, 196),#b13ad5,rgb(70, 139, 196), #d53a9d, rgb(70, 139, 196), magenta, #743ad5,rgb(70, 139, 196)) 1; 
+  animation: 5s rotate linear infinite;
+}
+  .top-row.pl-4.navbar.navbar-dark {
+   /* border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);*/
+    --angle: 0deg;
+    border: 5px solid;
+    /*border-image: linear-gradient(var(--angle), #743ad5, #d53a9d) 1;
+   */
+/*   border-image: conic-gradient(from var(--angle), #743ad5, rgb(70, 139, 196), #d53a9d, rgb(70, 139, 196), magenta, #743ad5,rgb(70, 139, 196)) 1; 
+  */  
+  border-image: conic-gradient(from var(--angle), #743ad5, rgb(70, 139, 196),#b13ad5,rgb(70, 139, 196), #d53a9d, rgb(70, 139, 196), magenta, #743ad5,rgb(70, 139, 196)) 1; 
+  animation: 5s rotate linear infinite;
+    
+  }
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
